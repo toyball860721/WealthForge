@@ -1,0 +1,229 @@
+{
+  "app_name": "Milestone - Countdown & Events",
+  "version": "1.0.0",
+  "bundle_id": "com.wealthforge.milestone",
+  "minimum_ios": "18.0",
+  "target_devices": ["iPhone", "iPad"],
+
+  "features": {
+    "core": [
+      {
+        "id": "F001",
+        "name": "事件管理",
+        "description": "创建、编辑、删除倒计时事件",
+        "user_stories": [
+          "用户可以创建新的倒计时事件（标题、日期、时间、图标）",
+          "用户可以编辑已有事件",
+          "用户可以删除事件（滑动删除）",
+          "用户可以标记事件为重复（年度纪念日）"
+        ],
+        "technical": "SwiftUI List + CoreData CRUD"
+      },
+      {
+        "id": "F002",
+        "name": "倒计时显示",
+        "description": "多种格式显示剩余时间",
+        "user_stories": [
+          "显示剩余天数",
+          "显示剩余小时/分钟（可选）",
+          "显示百分比进度条（可选）",
+          "已过期事件显示'已过去X天'"
+        ],
+        "technical": "Date计算 + 自定义View组件"
+      },
+      {
+        "id": "F003",
+        "name": "本地通知",
+        "description": "事件到期前提醒",
+        "user_stories": [
+          "用户可设置提醒时间（当天/1天前/1周前）",
+          "到期时发送本地通知",
+          "点击通知打开App到对应事件"
+        ],
+        "technical": "UserNotifications + UNNotificationCenter"
+      }
+    ],
+
+    "premium": [
+      {
+        "id": "F101",
+        "name": "主题系统",
+        "description": "自定义外观",
+        "free_tier": "2个基础主题",
+        "premium_tier": "10+主题（渐变、纯色、图案）",
+        "technical": "Theme枚举 + Environment传递"
+      },
+      {
+        "id": "F102",
+        "name": "自定义背景",
+        "description": "为每个事件设置背景图",
+        "free_tier": "不可用",
+        "premium_tier": "从相册选择或使用内置图库",
+        "technical": "PhotosPicker + 图片缓存"
+      },
+      {
+        "id": "F103",
+        "name": "小组件",
+        "description": "主屏幕显示倒计时",
+        "free_tier": "1个小组件（小尺寸）",
+        "premium_tier": "无限小组件（小/中/大）",
+        "technical": "WidgetKit + AppIntents"
+      },
+      {
+        "id": "F104",
+        "name": "iCloud同步",
+        "description": "多设备同步",
+        "free_tier": "不可用",
+        "premium_tier": "自动同步到所有设备",
+        "technical": "CloudKit + NSPersistentCloudKitContainer"
+      }
+    ]
+  },
+
+  "data_model": {
+    "Event": {
+      "id": "UUID",
+      "title": "String",
+      "targetDate": "Date",
+      "iconName": "String (SF Symbol)",
+      "colorTheme": "String",
+      "backgroundImage": "Data? (optional)",
+      "isRecurring": "Bool",
+      "notificationEnabled": "Bool",
+      "notificationOffset": "Int (days)",
+      "createdAt": "Date",
+      "sortOrder": "Int"
+    }
+  },
+
+  "screens": [
+    {
+      "name": "EventListView",
+      "description": "主界面，显示所有事件列表",
+      "components": ["NavigationStack", "List", "添加按钮", "设置按钮"]
+    },
+    {
+      "name": "EventDetailView",
+      "description": "单个事件详情页",
+      "components": ["大号倒计时显示", "进度环", "编辑按钮", "分享按钮"]
+    },
+    {
+      "name": "EventEditView",
+      "description": "创建/编辑事件",
+      "components": ["表单", "日期选择器", "图标选择器", "主题选择器"]
+    },
+    {
+      "name": "SettingsView",
+      "description": "设置页面",
+      "components": ["订阅管理", "通知设置", "关于", "Tip Jar"]
+    },
+    {
+      "name": "PaywallView",
+      "description": "订阅引导页",
+      "components": ["功能对比", "价格选项", "订阅按钮", "恢复购买"]
+    }
+  ],
+
+  "monetization_implementation": {
+    "sdk": "RevenueCat",
+    "products": [
+      {
+        "id": "milestone_monthly",
+        "type": "auto_renewable_subscription",
+        "price": "$2.99",
+        "duration": "1 month",
+        "trial": "3 days free"
+      },
+      {
+        "id": "milestone_yearly",
+        "type": "auto_renewable_subscription",
+        "price": "$19.99",
+        "duration": "1 year",
+        "trial": "7 days free"
+      },
+      {
+        "id": "tip_small",
+        "type": "consumable",
+        "price": "$0.99"
+      },
+      {
+        "id": "tip_medium",
+        "type": "consumable",
+        "price": "$2.99"
+      },
+      {
+        "id": "tip_large",
+        "type": "consumable",
+        "price": "$4.99"
+      }
+    ],
+    "paywall_triggers": [
+      "创建第4个事件时",
+      "尝试使用高级主题时",
+      "尝试添加自定义背景时",
+      "尝试添加第2个小组件时"
+    ]
+  },
+
+  "privacy_compliance": {
+    "data_collected": "无（仅本地存储）",
+    "optional_features": {
+      "iCloud": "需要用户主动开启，数据存储在用户的iCloud",
+      "notifications": "需要用户授权"
+    },
+    "third_party_sdks": [
+      {
+        "name": "RevenueCat",
+        "purpose": "IAP管理",
+        "data_shared": "购买记录（匿名）",
+        "privacy_manifest": "required"
+      }
+    ],
+    "privacy_policy_url": "https://wealthforge.oss-cn-hangzhou.aliyuncs.com/milestone/privacy.html"
+  },
+
+  "app_store_metadata": {
+    "primary_category": "Productivity",
+    "secondary_category": "Utilities",
+    "keywords": "countdown,timer,event,milestone,reminder,date,anniversary,birthday,deadline",
+    "subtitle": "Beautiful Countdown Tracker",
+    "promotional_text": "Never miss important moments again",
+    "description_preview": "Milestone helps you track and celebrate life's important moments. Create beautiful countdowns for birthdays, anniversaries, vacations, project deadlines, and more.",
+    "age_rating": "4+",
+    "content_rights": "原创，无第三方内容"
+  },
+
+  "technical_requirements": {
+    "xcode": "16.0+",
+    "swift": "6.0",
+    "frameworks": [
+      "SwiftUI",
+      "CoreData",
+      "CloudKit",
+      "UserNotifications",
+      "WidgetKit",
+      "StoreKit"
+    ],
+    "third_party": [
+      "RevenueCat SDK (via SPM)"
+    ],
+    "minimum_deployment": "iOS 18.0"
+  },
+
+  "testing_checklist": [
+    "创建/编辑/删除事件",
+    "倒计时计算准确性",
+    "通知按时触发",
+    "小组件正确显示",
+    "IAP购买流程",
+    "恢复购买功能",
+    "iCloud同步（多设备）",
+    "Dark Mode适配",
+    "Dynamic Type支持",
+    "VoiceOver基础支持",
+    "iPad布局适配"
+  ],
+
+  "created_at": "2026-03-22",
+  "status": "spec_completed"
+}

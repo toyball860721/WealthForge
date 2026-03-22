@@ -1,0 +1,79 @@
+{
+  "app_name": "Milestone - Countdown & Events",
+  "category": "工具类",
+  "concept": "简洁优雅的倒计时和纪念日追踪App，帮助用户记住重要日期（生日、纪念日、假期、项目截止日等）",
+  "target_audience": "18-45岁，注重生活仪式感的用户",
+  "core_features": [
+    "创建无限倒计时事件",
+    "多种显示模式（天/小时/分钟）",
+    "自定义主题和图标",
+    "本地通知提醒",
+    "主屏幕小组件",
+    "iCloud同步",
+    "重复事件（年度纪念日）"
+  ],
+  "monetization": {
+    "model": "freemium_subscription",
+    "free_tier": "最多3个倒计时，基础主题",
+    "premium_tier": {
+      "price_monthly": "$2.99",
+      "price_yearly": "$19.99",
+      "features": [
+        "无限倒计时",
+        "所有主题解锁",
+        "自定义背景图",
+        "高级小组件",
+        "无广告"
+      ]
+    },
+    "tip_jar": ["$0.99", "$2.99", "$4.99"]
+  },
+  "technical_stack": {
+    "language": "Swift",
+    "framework": "SwiftUI",
+    "storage": "CoreData",
+    "sync": "CloudKit",
+    "notifications": "UserNotifications",
+    "widgets": "WidgetKit"
+  },
+  "development_estimate": {
+    "days": 4,
+    "phases": [
+      "Day 1: 数据模型 + 基础UI",
+      "Day 2: 倒计时逻辑 + 通知",
+      "Day 3: 主题系统 + 小组件",
+      "Day 4: IAP + 测试 + 截图"
+    ]
+  },
+  "compliance_check": {
+    "privacy_risk": "低 - 仅本地数据，CloudKit可选",
+    "permissions_needed": ["通知"],
+    "third_party_sdk": "RevenueCat（IAP管理）",
+    "guideline_risks": []
+  },
+  "competitive_analysis": {
+    "competitors": ["Countdown Star", "Big Day", "Dreamdays"],
+    "differentiation": [
+      "更简洁的设计",
+      "更快的启动速度",
+      "更美的小组件",
+      "更合理的定价"
+    ]
+  },
+  "revenue_projection": {
+    "conservative_monthly": 150,
+    "basis": "100下载/月 × 5%转化率 × $2.99 = $15/月，首月预计10倍（新品流量）",
+    "breakeven_downloads": 287
+  },
+  "scoring": {
+    "technical_feasibility": 28.5,
+    "compliance_simplicity": 25,
+    "profit_potential": 14,
+    "competition_gap": 10.5,
+    "budget_match": 10,
+    "total": 88,
+    "decision": "APPROVED - 进入可行性评估阶段"
+  },
+  "created_at": "2026-03-22",
+  "status": "idea_approved"
+}

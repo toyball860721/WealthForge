@@ -1,0 +1,33 @@
+{
+  "agent_version": "5.0",
+  "start_date": "2026-03-22",
+  "current_phase": "compliance_review",
+  "finance": {
+    "base_monthly_cost": 857,
+    "current_month_extra_cost": 0,
+    "current_month_loan_repayment": 0,
+    "current_month_total_cost": 857,
+    "previous_month_total_cost": 857,
+    "survival_line": 857,
+    "reproduce_line": 3428,
+    "current_month_revenue": 0,
+    "total_revenue": 0,
+    "apple_balance_carried_forward": 0,
+    "consecutive_miss_count": 0,
+    "consecutive_reproduce_count": 0,
+    "status": "protection_period",
+    "protection_period_ends": null
+  },
+  "loan": {
+    "active": false,
+    "amount": 0,
+    "remaining": 0,
+    "deadline": null,
+    "purpose": null
+  },
+  "submissions_this_month": 0,
+  "max_submissions_per_month": 3,
+  "active_projects": ["countdown-app"],
+  "published_apps": [],
+  "next_action": "run_compliance_check"
+}

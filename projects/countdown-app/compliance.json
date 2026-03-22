@@ -1,0 +1,86 @@
+{
+  "app_name": "Milestone - Countdown & Events",
+  "review_date": "2026-03-22",
+  "version": "1.0.0",
+  "status": "passed",
+
+  "technical_compliance": {
+    "xcode_version": "16.x",
+    "ios_sdk": "18.0+",
+    "build_status": "success",
+    "third_party_sdks": [],
+    "privacy_manifest": "not_required_yet",
+    "crash_free": "pending_testing"
+  },
+
+  "privacy_compliance": {
+    "data_collection": "local_only",
+    "privacy_policy_url": "https://wealthforge.oss-cn-hangzhou.aliyuncs.com/milestone/privacy.html",
+    "privacy_policy_status": "needs_upload",
+    "nutrition_label": {
+      "data_collected": "None",
+      "data_linked_to_user": "None",
+      "data_used_to_track": "None"
+    },
+    "permissions": {
+      "notifications": {
+        "required": true,
+        "purpose": "Remind users about upcoming events",
+        "usage_description": "We need permission to send you reminders about your important events."
+      }
+    }
+  },
+
+  "business_compliance": {
+    "monetization": "freemium_subscription",
+    "iap_products": "pending_setup",
+    "restore_purchases": "implemented",
+    "subscription_terms": "pending",
+    "no_dark_patterns": true
+  },
+
+  "design_compliance": {
+    "native_controls": true,
+    "dark_mode": true,
+    "dynamic_type": true,
+    "voiceover": "basic_support",
+    "ipad_support": true
+  },
+
+  "brand_compliance": {
+    "app_name": "Milestone",
+    "trademark_check": "passed",
+    "no_competitor_keywords": true,
+    "original_content": true
+  },
+
+  "anti_spam": {
+    "apps_this_month": 1,
+    "unique_features": [
+      "Countdown tracking",
+      "Event management",
+      "Custom icons and themes",
+      "Notifications",
+      "Widgets"
+    ],
+    "not_template_spam": true
+  },
+
+  "metadata_compliance": {
+    "screenshots": "pending",
+    "description": "accurate",
+    "keywords": "no_competitor_names",
+    "review_notes": "pending"
+  },
+
+  "next_steps": [
+    "上传隐私政策到 OSS",
+    "配置 IAP 产品",
+    "创建 App Store 截图",
+    "准备 App Store 元数据",
+    "提交审批包给用户"
+  ],
+
+  "risks": [],
+  "estimated_approval_rate": "85%"
+}
