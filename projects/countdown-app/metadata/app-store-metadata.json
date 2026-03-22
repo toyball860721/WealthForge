@@ -1,0 +1,27 @@
+{
+  "app_name": "Milestone",
+  "subtitle": "Beautiful Countdown Tracker",
+  "promotional_text": "Never miss important moments again",
+
+  "description": {
+    "short": "Track and celebrate life's important moments with beautiful countdowns.",
+    "full": "Milestone helps you track and celebrate life's important moments. Create beautiful countdowns for birthdays, anniversaries, vacations, project deadlines, and more.\n\nFEATURES:\n\n• Beautiful Countdowns\nCreate unlimited countdown events with custom icons and themes. See exactly how many days remain until your important dates.\n\n• Custom Icons & Themes\nChoose from a variety of icons to personalize each event. Make your countdowns uniquely yours.\n\n• Smart Notifications\nGet reminded about upcoming events so you never miss an important moment.\n\n• Home Screen Widgets\nSee your countdowns at a glance with beautiful home screen widgets.\n\n• iCloud Sync\nKeep your events synced across all your devices with iCloud.\n\n• Privacy First\nAll your data stays on your device. We don't collect or share any personal information.\n\n• Dark Mode\nFully supports Dark Mode for comfortable viewing any time of day.\n\nPERFECT FOR:\n• Birthdays and anniversaries\n• Vacation countdowns\n• Project deadlines\n• Special events\n• Holidays\n• And any important date you want to remember!\n\nMilestone is designed with simplicity and elegance in mind. No complicated features, just beautiful countdowns that help you celebrate what matters most.\n\nDownload Milestone today and never miss another important moment!"
+  },
+
+  "keywords": "countdown,timer,event,milestone,reminder,date,anniversary,birthday,deadline,tracker",
+
+  "categories": {
+    "primary": "Productivity",
+    "secondary": "Utilities"
+  },
+
+  "age_rating": "4+",
+
+  "support_url": "https://github.com/toyball860721/WealthForge/issues",
+  "marketing_url": "https://toyball860721.github.io/WealthForge/",
+  "privacy_policy_url": "https://toyball860721.github.io/WealthForge/projects/countdown-app/privacy-policy.html",
+
+  "review_notes": "Thank you for reviewing Milestone!\n\nTest Account: Not required (no login needed)\n\nKey Features to Test:\n1. Create a new countdown event\n2. Edit event details (title, date, icon)\n3. View event details page\n4. Delete events (swipe left)\n5. Check Settings page and Privacy Policy link\n6. Test Dark Mode\n\nPrivacy:\n- All data is stored locally on device\n- No analytics or tracking\n- Optional iCloud sync (user controlled)\n\nMonetization:\n- Freemium model with subscription\n- Free tier: up to 3 events\n- Premium: unlimited events, themes, widgets\n\nThe app is fully functional and ready for review. Please let me know if you need any additional information.",
+
+  "whats_new": "Welcome to Milestone!\n\nThis is the first release of Milestone, your beautiful countdown tracker.\n\n• Create unlimited countdown events\n• Customize with icons and themes\n• Get smart notifications\n• Home screen widgets\n• iCloud sync\n• Privacy-first design\n\nWe hope you love using Milestone to track your important moments!"
+}
