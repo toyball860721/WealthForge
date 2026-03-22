@@ -15,8 +15,8 @@
 
   "privacy_compliance": {
     "data_collection": "local_only",
-    "privacy_policy_url": "https://wealthforge.oss-cn-hangzhou.aliyuncs.com/milestone/privacy.html",
-    "privacy_policy_status": "needs_upload",
+    "privacy_policy_url": "https://toyball860721.github.io/WealthForge/projects/countdown-app/privacy-policy.html",
+    "privacy_policy_status": "live",
     "nutrition_label": {
       "data_collected": "None",
       "data_linked_to_user": "None",
